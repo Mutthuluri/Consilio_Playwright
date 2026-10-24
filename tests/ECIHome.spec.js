@@ -1,16 +1,10 @@
-import { test, expect } from '@playwright/test';
+import { test } from '@playwright/test';
+const LoginPage = require('../pageObjects/LoginPage');
+const consilioData = require('../test_data/consilio_data.json');
 
 test('test', async ({ page }) => {
-  await page.goto('https://aurora-uat1.consilio.com/login');
-  await expect(page.getByRole('textbox', { name: 'Enter the email address' })).toBeVisible();
-  await page.getByRole('textbox', { name: 'Enter the email address' }).click();
-  await page.getByRole('textbox', { name: 'Enter the email address' }).fill('VarunKumar.M@consilio.com');
-  await page.getByRole('button', { name: 'Continue' }).click();
-  await expect(page.getByRole('textbox', { name: 'Enter the password for' })).toBeVisible({ timeout: 120000 });
-  await page.getByRole('textbox', { name: 'Enter the password for' }).click();
-  await page.getByRole('textbox', { name: 'Enter the password for' }).fill('Eswaraiahsulochana3234#');
-  await page.getByRole('button', { name: 'Sign in' }).click();
-  await page.waitForURL('**/welcome-multi-client', { timeout: 120000 });
+  const loginPage = new LoginPage(page);
+  await loginPage.login(consilioData.url, consilioData.username, consilioData.password);
   
   await page.getByRole('textbox', { name: 'Search by client name...' }).click();
   await page.getByRole('textbox', { name: 'Search by client name...' }).fill('consilio special project');
