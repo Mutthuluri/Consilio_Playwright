@@ -10,5 +10,6 @@ test('Authenticate User', async ({ page }) => {
     await page.context().storageState({
         path: 'playwright/.auth/user.json'
     });
+    console.log('Authentication state saved.');
     
 });

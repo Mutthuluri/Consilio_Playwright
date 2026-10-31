@@ -1,0 +1,5 @@
+Login is successful.
+Multi-client dashboard opened successfully.
+Client selected: consilio special project.
+Project selected: Aurora  ECI Phase 21 Testing.
+CoreECI launch action completed.

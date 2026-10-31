@@ -1,0 +1,51 @@
+Test failed due to Browser Issue locator.waitFor: Test timeout of 120000ms exceeded.
+Call log:
+  - waiting for getByRole('textbox', { name: 'Enter the password for' }) to be visible
+    - waiting for "https://aurora-uat1.consilio.com/ux-api/v1/Authentication/account/login?login_hint=VarunKumar.M%40consilio.com" navigation to finish...
+
+    at LoginPage.login (C:\Users\2000199862\OneDrive - Hexaware Technologies\Hexaware_Projects\Consilio_Automation\pageObjects\LoginPage.js:13:43)
+    at C:\Users\2000199862\OneDrive - Hexaware Technologies\Hexaware_Projects\Consilio_Automation\tests\ECIHome.spec.js:8:3 {
+  log: [
+    "  - waiting for getByRole('textbox', { name: 'Enter the password for' }) to be visible",
+    '    - waiting for "https://aurora-uat1.consilio.com/ux-api/v1/Authentication/account/login?login_hint=VarunKumar.M%40consilio.com" navigation to finish...'
+  ],
+  Symbol(step): {
+    stack: [ [Object], [Object] ],
+    category: 'pw:api',
+    title: 'Wait for selector',
+    subtitle: "getByRole('textbox', { name: 'Enter the password for' })",
+    params: {
+      locator: "getByRole('textbox', { name: 'Enter the password for' })",
+      state: 'visible'
+    },
+    group: undefined,
+    stepId: 'antv@42',
+    boxedStack: undefined,
+    steps: [],
+    attachmentIndices: [],
+    info: TestStepInfoImpl {
+      annotations: [],
+      _testInfo: [TestInfoImpl],
+      _stepId: 'antv@42',
+      _title: 'Wait for selector',
+      _parentStep: undefined,
+      skip: [Function (anonymous)]
+    },
+    complete: [Function: complete],
+    endWallTime: 1793079295068,
+    error: {
+      message: 'Error: locator.waitFor: Test timeout of 120000ms exceeded.\n' +
+        'Call log:\n' +
+        "\x1B[2m  - waiting for getByRole('textbox', { name: 'Enter the password for' }) to be visible\x1B[22m\n" +
+        '\x1B[2m    - waiting for "https://aurora-uat1.consilio.com/ux-api/v1/Authentication/account/login?login_hint=VarunKumar.M%40consilio.com" navigation to finish...\x1B[22m\n',
+      stack: 'Error: locator.waitFor: Test timeout of 120000ms exceeded.\n' +
+        'Call log:\n' +
+        "\x1B[2m  - waiting for getByRole('textbox', { name: 'Enter the password for' }) to be visible\x1B[22m\n" +
+        '\x1B[2m    - waiting for "https://aurora-uat1.consilio.com/ux-api/v1/Authentication/account/login?login_hint=VarunKumar.M%40consilio.com" navigation to finish...\x1B[22m\n' +
+        '\n' +
+        '    at LoginPage.login (C:\\Users\\2000199862\\OneDrive - Hexaware Technologies\\Hexaware_Projects\\Consilio_Automation\\pageObjects\\LoginPage.js:13:43)\n' +
+        '    at C:\\Users\\2000199862\\OneDrive - Hexaware Technologies\\Hexaware_Projects\\Consilio_Automation\\tests\\ECIHome.spec.js:8:3',
+      cause: undefined
+    }
+  }
+}
